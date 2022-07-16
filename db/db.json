@@ -1,9 +1,1 @@
-{
-"notes":
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
-}
+[{"title":"Test Title","text":"Test text"},{"title":"New note","text":"Note","id":"e2cdcede-8ab3-4e76-9f1d-3996c2bfb099"},{"title":"new note 2","text":"new note","id":"a7c11f07-a54e-4fec-a491-18461ecc42e1"},{"title":"Note 3","text":"New note 3","id":"5a3442ed-94c9-4ac6-8c42-1709c700b896"},{"title":"note 25","text":"edit note 35","id":"e2606321-5bfc-44d6-b97f-fae20400b85a"}]
