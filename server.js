@@ -1,12 +1,14 @@
 const fs = require('fs')
 const path = require('path')
 const { v4: uuidv4 } = require('uuid')
-const { notes }  = require('./db/db.json')
+
+
+const notes = require('./db/db.json')
 const express = require('express')
 
 const PORT = process.env.PORT || 3001
 const app = express()
-// link index html
+
 app.use(express.static(__dirname + '/'))
 
 // parse incoming string or array data 
@@ -33,6 +35,8 @@ app.post('/api/notes', (req, res) => {
 
     let jsonFilePath = path.join(__dirname, '/db/db.json')
 
+    console.log(newNote)
+
     // assign unique id from npm package
     newNote.id = uuidv4()
 
@@ -46,7 +50,7 @@ app.post('/api/notes', (req, res) => {
         } console.log('notes saved')
     })
     
-    // send new notes
+    // send 
     res.json(newNote)
 })
 
