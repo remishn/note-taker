@@ -1,8 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const { v4: uuidv4 } = require('uuid')
-
-
 const notes = require('./db/db.json')
 const express = require('express')
 
@@ -50,9 +48,10 @@ app.post('/api/notes', (req, res) => {
         } console.log('notes saved')
     })
     
-    // send 
+    // send new notes
     res.json(newNote)
 })
+
 
 app.listen(PORT, () => {
     console.log(`API server now on port 3001`)
