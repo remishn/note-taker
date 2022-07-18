@@ -5,9 +5,9 @@
   # Description
   A note taker application for users to add, edit, save notes and delete saved notes. This application uses express js for backend. 
 
-  ![Alt text](/note-taker/assets/src/Images/note%201%20(2).png?raw=true)
+  ![Alt text](./assets/src/Images/note%201%20(2).png)
 
-  ![Alt text](/note-taker/assets/src/Images/note%202.png?raw=true)
+  ![Alt text](./assets/src/Images/note%202.png)
 
   # Deployed application
 
