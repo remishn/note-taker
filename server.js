@@ -51,10 +51,10 @@ app.post('/api/notes', (req, res) => {
     // send new notes
     res.json(newNote)
 })
-
+    // delete function
 app.delete('/api/notes/:id', (req, res) => {
     notes = notes.filter(note => note.id !== req.params.id)
-    console.log(notes)
+
     let jsonFilePath = path.join(__dirname, '/db/db.json')
 
     fs.writeFile(jsonFilePath, JSON.stringify(notes), function (err)  {
@@ -63,7 +63,7 @@ app.delete('/api/notes/:id', (req, res) => {
         } console.log('note deleted')
     })
     
-    // send new notes
+    // send updated note
     res.json(notes)
     
 })
