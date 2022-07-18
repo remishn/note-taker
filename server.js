@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const { v4: uuidv4 } = require('uuid')
-const notes = require('./db/db.json')
+let notes = require('./db/db.json')
 const express = require('express')
 
 const PORT = process.env.PORT || 3001
@@ -50,6 +50,22 @@ app.post('/api/notes', (req, res) => {
     
     // send new notes
     res.json(newNote)
+})
+
+app.delete('/api/notes/:id', (req, res) => {
+    notes = notes.filter(note => note.id !== req.params.id)
+    console.log(notes)
+    let jsonFilePath = path.join(__dirname, '/db/db.json')
+
+    fs.writeFile(jsonFilePath, JSON.stringify(notes), function (err)  {
+        if (err) {
+            return console.log(err)
+        } console.log('note deleted')
+    })
+    
+    // send new notes
+    res.json(notes)
+    
 })
 
 
